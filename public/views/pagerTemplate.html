@@ -1,0 +1,27 @@
+<div  class="panel" ng-cloak>
+  <div class="panel-body ghapoon-background" style="height:70px;padding-top:4px;">
+    <div class="row">
+     <div class="col-sm-1 col-md-1" > <a ng-show='index > 0' ng-click="setpage({data:index})">Previous</a></div>
+     <div class="col-sm-10 col-md-1">
+         <div class="btn-group" style="padding:2px;" ng-repeat="page in pages">
+        
+           <a ng-click="setpage({ data : page })" 
+           ng-class="{'btn btn-primary ': index+1  ==page , 'btn btn-default' : index +1  != page }">
+           {{page}}
+         </a>
+         
+        </div>
+      
+     </div>
+     <div class="col-sm-1 col-md-1"><a ng-show='index +1 < nopages' ng-click="setpage({data:index + 2})">Next</a></div>
+   </div>
+   <div class="row">
+     <div class="col-sm-12">
+    
+      <b>{{counts > perpage ? perpage : counts }}<b>&nbsp; of &nbsp;  <b>{{counts}}<b>
+   
+    
+    
+     </div>
+   </div>
+</div>

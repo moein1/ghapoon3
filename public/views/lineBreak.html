@@ -1,0 +1,10 @@
+<a href="#" ng-repeat="item in list">
+	<span class="photo"><img alt="Ghapoon" ng-src="data:image/jpg;base64,{{item.base64_array}}"></span>
+    <span class="subject">
+     <span class="from">{{item.ProductName}}</span>
+     <span class="time" style="padding-left:10px;">{{item.AddDate | fromNow}}</span>
+    </span>
+    <div ng-repeat="mess in item.messageList">
+      <span class="">{{mess}}</span>
+    </div>
+</a>
