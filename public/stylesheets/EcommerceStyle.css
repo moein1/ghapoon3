@@ -129,6 +129,22 @@ position:fixed;
     outline: none;
     z-index: 121;
 }
+/*ovelay for mobile screen xs bootstrap*/
+.overlay .overlay-close-xs {
+
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    overflow: hidden;
+    border: none;
+    background: url(../images/cross.png) no-repeat center center;
+    text-indent: 100%;
+    color: transparent;
+    outline: none;
+    z-index: 121;
+}
 
 /* Menu style */
 .overlay nav {
@@ -140,7 +156,15 @@ position:fixed;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
+.overlay nav.xs {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    height: 30%;
+    font-size: 34px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 .overlay ul {
     list-style: none;
     padding: 0;

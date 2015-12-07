@@ -26,7 +26,9 @@ directive('slider',['$timeout',function ($timeout) {
 			overlay = document.querySelector( 'div.overlay' ),
 		    overly2=angular.element(overlay);
 		    closeBttn = overlay.querySelector( 'button.overlay-close' );
-		    closeBttn2=angular.element(closeBttn);
+		    closeBttnxs = document.querySelector( 'button.overlay-close-xs' );
+		    closeBttn2=angular.element(closeBttnxs);
+		    closeBttn3=angular.element(closeBttn);
 		    transEndEventNames = {
 		      'WebkitTransition': 'webkitTransitionEnd',
 		      'MozTransition': 'transitionend',
@@ -65,7 +67,8 @@ directive('slider',['$timeout',function ($timeout) {
 		  }
 
 		  //triggerBttn.addEventListener( 'click', toggleOverlay );
-		  closeBttn2.on( 'click', toggleOverlay );
+		  closeBttn2.on('click', toggleOverlay );
+		  closeBttn3.on('click', toggleOverlay );
 		},
 		templateUrl:'./views/sliderTempalte.html'
 	}

@@ -1,8 +1,8 @@
 <div  class="panel" ng-cloak>
   <div class="panel-body ghapoon-background" style="height:70px;padding-top:4px;">
     <div class="row">
-     <div class="col-sm-1 col-md-1" > <a ng-show='index > 0' ng-click="setpage({data:index})">Previous</a></div>
-     <div class="col-sm-10 col-md-1">
+     <div class="col-sm-1 col-md-1 col-lg-1" > <a ng-show='index > 0' ng-click="setpage({data:index})">Previous</a></div>
+     <div class="col-sm-10 col-md-10 col-lg-10">
          <div class="btn-group" style="padding:2px;" ng-repeat="page in pages">
         
            <a ng-click="setpage({ data : page })" 
@@ -13,7 +13,7 @@
         </div>
       
      </div>
-     <div class="col-sm-1 col-md-1"><a ng-show='index +1 < nopages' ng-click="setpage({data:index + 2})">Next</a></div>
+     <div class="col-sm-1 col-md-1 col-lg-1"><a ng-show='index +1 < nopages' ng-click="setpage({data:index + 2})">Next</a></div>
    </div>
    <div class="row">
      <div class="col-sm-12">

@@ -1,22 +1,29 @@
 <div>
-<p style="font-size:16pt;color:white;width:800px">{{description}}</p>			
+		
 	<div class="col-sm-12 hidden-xs">
+	<p style="font-size:16pt;color:white;width:800px;padding-right:30px;">{{description}}</p>	
 		<div  ng-cloak>
 			 <img height="350" width="450"  alt="ghapoon" 
 			 ng-src= "data:image/jpg;base64,{{selectedImage == '' ?  images[0].src : selectedImage.src}}" 
 			  ng-cloak/>
 		</div>
     </div>
-    <div class="col-sm-12 visible-xs">
-		<div  ng-cloak>
-			 <img height="200" width="300"  alt="ghapoon" 
-			 ng-src= "data:image/jpg;base64,{{selectedImage == '' ?  images[0].src : selectedImage.src}}" 
-			  ng-cloak/>
-		</div>
-    </div>
+    <div class="row visible-xs">
+    	<p style="font-size:12pt;color:white;width:600px;padding-right:130px;">{{description}}</p>	
+    	<div class="col-xs-1"></div>
+	    <div class="col-xs-7">
+			<div  ng-cloak>
+				 <img height="200" width="300"  alt="ghapoon" 
+				 ng-src= "data:image/jpg;base64,{{selectedImage == '' ?  images[0].src : selectedImage.src}}" 
+				  ng-cloak/>
+			</div>
+	    </div>
+	    <div class="col-xs-4"></div>
+	</div>
 	<div>
-		 <div class="col-sm-3" ng-repeat='image in images'>
-	       	 <img width="130px" ng-click="selectImage1(image)" height="90px" ng-src="data:image/jpg;base64,{{image.src}}" 
+		 <div class="col-xs-3 col-sm-3" ng-repeat='image in images'>
+	       	 <img width="130px" ng-click="selectImage1(image)" height="90px" 
+	       	 ng-src="data:image/jpg;base64,{{image.src}}" 
 	       	 style="float:left;padding:5px;" />
 	     </div>
 	</div>
